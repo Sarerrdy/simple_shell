@@ -28,7 +28,7 @@ int _putchar(char c);
 char *_strncpy(char *dest, char *src);
 int _strcmp(char *str1, char *str2);
 void get_all_env(void);
-void exit_shell(void);
+void exit_shell(char *input);
 char *search_directories(char **path_tokens, char *command);
 char *build_path(char *directory, char *command);
 #endif /* SHELL_H */

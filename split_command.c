@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * split_string - parses through string and splits it according to delimeter
  * @usr_input: command input by user
@@ -8,7 +7,6 @@
  *
  * Return: an array containing the split commands
  */
-
 char **split_string(char *usr_input, const char *delimiter)
 {
 	int buf = 1024;

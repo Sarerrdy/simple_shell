@@ -1,9 +1,5 @@
 #include "shell.h"
 
-#include <string.h>
-#include <stdio.h>
-
-
 /**
  * get_path_index - Finds the index of an environmental variable.
  * @str: Environmental variable that needs to be found.
@@ -30,11 +26,8 @@ int get_path_index(char *str)
 	return (-1);
 }
 
-
-
 /**
- * char *_getpath(const char *pathname)
- - Finds the index of an environmental variable.
+ * _getpath - Finds the index of an environmental variable.
  * @pathname: Environmental variable that needs to be found.
  * Return: Upon success returns the index of the environmental variable.
  * otherwise returns -1.
@@ -42,21 +35,16 @@ int get_path_index(char *str)
 char *_getpath(char *pathname)
 {
 	int index;
-	int i;
-	int len;
-	char *env_copy;	
-	char *full_path;
-	
+	char *env_copy = NULL;
+	char *full_path = NULL;
 
 	index = get_path_index(pathname);
-	if(index != -1)
-	{	
-		env_copy = _strncpy(env_copy, environ[index]);
-		full_path = strtok(env_copy, "=");
-		full_path = strtok(NULL, "=");	
+	if (index != -1)
+	{
+	env_copy = _strncpy(env_copy, environ[index]);
+	full_path = strtok(env_copy, "=");
+	full_path = strtok(NULL, "=");
 		return (full_path);
 	}
-
+	return (NULL);
 }
-
-

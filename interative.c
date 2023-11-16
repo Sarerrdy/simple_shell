@@ -37,7 +37,7 @@ void interactive_mode(void)
 			}
 			else
 			{
-				status = execute_cmd(input_tokens);
+			status = execute_cmd(input_tokens);
 			}
 		}
 	}

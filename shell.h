@@ -13,9 +13,9 @@
 #include <stdarg.h>
 #include <signal.h>
 
+extern char **environ;
 void interactive_mode(void);
 void non_interactive_mode(void);
-extern char **environ;
 int str_len(char *str);
 char *read_stream(void);
 char *myread_line();
@@ -28,7 +28,7 @@ int _putchar(char c);
 char *_strncpy(char *dest, char *src);
 int _strcmp(char *str1, char *str2);
 void get_all_env(void);
-void exit_shell(char *input);
+void exit_shell(char *inputi);
 char *search_directories(char **path_tokens, char *command);
 char *build_path(char *directory, char *command);
 #endif /* SHELL_H */

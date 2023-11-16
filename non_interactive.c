@@ -28,14 +28,14 @@ void non_interactive_mode(void)
 	{
 	full_path = build_path(directory, *input_tokens);
 	if (full_path == NULL)
-	free(env_var_tokens);
+		free(env_var_tokens);
 	*input_tokens = full_path;
 	status = execute_cmd(input_tokens);
 	free(env_var_tokens);
 	}
 	else
 	{
-	status = execute_cmd(input_tokens);
+		status = execute_cmd(input_tokens);
 	}
 	}
 	}

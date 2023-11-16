@@ -41,9 +41,9 @@ char *_getpath(char *pathname)
 	index = get_path_index(pathname);
 	if (index != -1)
 	{
-	env_copy = _strncpy(env_copy, environ[index]);
-	full_path = strtok(env_copy, "=");
-	full_path = strtok(NULL, "=");
+		env_copy = _strncpy(env_copy, environ[index]);
+		full_path = strtok(env_copy, "=");
+		full_path = strtok(NULL, "=");
 		return (full_path);
 	}
 	return (NULL);

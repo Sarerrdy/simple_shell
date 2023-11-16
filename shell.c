@@ -9,11 +9,8 @@
  * Return: returns 0 on successful execution
  */
 
-int main(int argc, char **argv, char **env_args)
+int main()
 {
-	(void) argc;
-	(void) argv;
-	(void) env_args;
 	if (isatty(STDIN_FILENO) == 1)
 	{
 	interactive_mode();
